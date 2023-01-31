@@ -1,18 +1,22 @@
 export function saveBasket(product) {
-    localStorage.setItem("product", JSON.stringify(product))
+    localStorage.setItem("basket", JSON.stringify(product))
 }
 
 export function getBasket() {
-    const basket = JSON.parse(localStorage.getItem("product"))
+    const basket = JSON.parse(localStorage.getItem("basket"))
     return basket === null ? [] : basket
 }
 
 export function addBasket(product) {
     const basket = getBasket()
+    // Find product
+    const foundProduct = basket.find(p => p._id === product._id && p.color === product.color)
 
-    // Filter les product
-    // const other = basket.filter(a => a._id === product._id && a.color === product.color)
+    if (foundProduct === undefined) {
+        basket.push(product);
+    } else {
+        foundProduct.quantity += product.quantity;
+    }
 
-    basket.push(product)
     saveBasket(basket)
 }

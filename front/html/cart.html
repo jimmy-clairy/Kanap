@@ -32,7 +32,9 @@
 
   <main class="main">
     <h1 class="cart-heading border">Votre panier</h1>
-    <article class="cart-item border">
+    <div id="item">
+    </div>
+    <!-- <article class="cart-item border">
       <img class="cart-item__img" src="../images/kanap01.jpeg" alt="Kanap" width="350" height="315">
       <div class="cart-item__content">
         <h2 class="cart-item__heading">Kanap</h2>
@@ -44,20 +46,7 @@
         </div>
         <a>Supprimer</a>
       </div>
-    </article>
-    <article class="cart-item border">
-      <img class="cart-item__img" src="../images/kanap01.jpeg" alt="Kanap" width="350" height="315">
-      <div class="cart-item__content">
-        <h2 class="cart-item__heading">Kanap</h2>
-        <p class="cart-item__color">Blue</p>
-        <p class="cart-item__price">450<span> €</span></p>
-        <div class="cart__item__content__settings__quantity">
-          <span>Qté : </span>
-          <input type="number" class="itemQuantity" name="itemQuantity" min="1" max="100" value="42">
-        </div>
-        <a>Supprimer</a>
-      </div>
-    </article>
+    </article> -->
 
     <p class="cart__price">Total (<span id="totalQuantity"><!-- 2 --></span> articles) : <span
         id="totalPrice"><!-- 84,00 --></span> €</p>
@@ -104,7 +93,7 @@
     <p class="footer__p">Email : support@name.com</p>
   </footer>
   <p class="copyright">© Copyright 2021 - 2042 | Openclassrooms by Openclassrooms | All Rights Reserved | Powered by</p>
-  <script src="../js/cart.js"></script>
+  <script src="../js/cart.js" type="module"></script>
 </body>
 
 </html>

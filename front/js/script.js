@@ -16,7 +16,7 @@ function addKanap(data) {
         a.href = "./product.html?id=" + kanap._id
         img.src = kanap.imageUrl
         img.alt = kanap.altTxt
-        h3.textContent = kanap.name
+        h2.textContent = kanap.name
         p.textContent = kanap.description
 
         items.append(a)

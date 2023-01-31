@@ -123,7 +123,7 @@ img {
 .nav__link {
   display: inline-block;
   color: #2c3e50;
-  padding: 0 2rem;
+  padding: 2rem;
   transition: transform 0.3s;
 }
 .nav__link:hover {
@@ -200,7 +200,8 @@ img {
   transition: all 0.4s;
 }
 #items a img {
-  height: 18rem;
+  height: 17rem;
+  object-fit: cover;
 }
 #items a h3 {
   font-size: 2rem;

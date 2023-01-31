@@ -34,6 +34,8 @@ function createItem(data) {
 
     img.src = data.imageUrl
     img.alt = data.altTxt
+    img.width = 700
+    img.height = 600
     title.textContent = data.name
     price.textContent = data.price
     description.textContent = data.description
@@ -48,9 +50,23 @@ colors.addEventListener("change", () => {
 
 const quantity = document.querySelector(".item__content-quantity input")
 quantity.addEventListener("change", () => {
-    product.quantity = quantity.value
+    product.quantity = Number(quantity.value)
 })
 
 const btn = document.getElementById('addToCart')
 
-btn.addEventListener('click', () => addBasket(product))
+btn.addEventListener('click', () => verif(product))
+
+function verif(p) {
+
+    if (p.color === undefined || p.color === "") {
+        return alert("Vous devez choisir une couleur")
+    }
+    if (p.quantity === undefined || p.quantity < 1 || p.quantity > 100) {
+        return alert("Vous devez choisir une quantité entre 1 et 100 articles")
+    }
+
+    addBasket(p)
+
+    confirm("Votre article a bien etait ajouté voulez vous allez au panier") ? window.location = "cart.html" : console.log("No redirect cart");
+}

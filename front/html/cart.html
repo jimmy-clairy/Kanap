@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Cart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plateforme incroyable de e-commerce">
+  <title>Kanap</title>
+  <script src="https://kit.fontawesome.com/288135bec0.js" crossorigin="anonymous" defer></script>
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="nav-top">
+    <a class="nav-top__link" href="tel:+33662607431"><i class="fa-solid fa-phone"></i>06 62 60 74 31</a>
+    <a class="nav-top__link" href="mailto:jimmyclairy@gmail.com"><i
+        class="fa-solid fa-envelope"></i>jimmyclairy@gmail.com</a>
+    <a class="nav-top__link" href="#"><i class="fa-sharp fa-solid fa-location-dot"></i>06 62 60 74 31</a>
+  </nav>
+
+  <header class="header">
+    <a class="header__img" href="./index.html"><img class="logo" src="../images/compressed/logo.webp" alt="logo"
+        width="300" height="359"></a>
+    <nav class="nav">
+      <a class="nav__link" href="./index.html">Accueil</a>
+      <a class="nav__link" href="./cart.html">Panier</a>
+    </nav>
+  </header>
+
+  <img class="banniere" src="../images/compressed/banniere.webp" alt="banniere" width="1920" height="827">
+
+  <main class="main">
+    <h1 class="cart-heading border">Votre panier</h1>
+    <article class="cart-item border">
+      <img class="cart-item__img" src="../images/kanap01.jpeg" alt="Kanap" width="350" height="315">
+      <div class="cart-item__content">
+        <h2 class="cart-item__heading">Kanap</h2>
+        <p class="cart-item__color">Blue</p>
+        <p class="cart-item__price">450<span> €</span></p>
+        <div class="cart__item__content__settings__quantity">
+          <span>Qté : </span>
+          <input type="number" class="itemQuantity" name="itemQuantity" min="1" max="100" value="42">
+        </div>
+        <a>Supprimer</a>
+      </div>
+    </article>
+    <article class="cart-item border">
+      <img class="cart-item__img" src="../images/kanap01.jpeg" alt="Kanap" width="350" height="315">
+      <div class="cart-item__content">
+        <h2 class="cart-item__heading">Kanap</h2>
+        <p class="cart-item__color">Blue</p>
+        <p class="cart-item__price">450<span> €</span></p>
+        <div class="cart__item__content__settings__quantity">
+          <span>Qté : </span>
+          <input type="number" class="itemQuantity" name="itemQuantity" min="1" max="100" value="42">
+        </div>
+        <a>Supprimer</a>
+      </div>
+    </article>
+
+    <p class="cart__price">Total (<span id="totalQuantity"><!-- 2 --></span> articles) : <span
+        id="totalPrice"><!-- 84,00 --></span> €</p>
+
+
+    <form method="get" class="form">
+      <div class="form__question">
+        <label for="firstName">Prénom: </label>
+        <input type="text" name="firstName" id="firstName" required>
+        <p id="firstNameErrorMsg" class="form__errorMsg">ci est un message d'erreur</p>
+      </div>
+      <div class="form__question">
+        <label for="lastName">Nom: </label>
+        <input type="text" name="lastName" id="lastName" required>
+        <p id="lastNameErrorMsg" class="form__errorMsg"></p>
+      </div>
+      <div class="form__question">
+        <label for="address">Adresse: </label>
+        <input type="text" name="address" id="address" required>
+        <p id="addressErrorMsg" class="form__errorMsg"></p>
+      </div>
+      <div class="form__question">
+        <label for="city">Ville: </label>
+        <input type="text" name="city" id="city" required>
+        <p id="cityErrorMsg" class="form__errorMsg"></p>
+      </div>
+      <div class="form__question">
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+        <p id="emailErrorMsg" class="form__errorMsg"></p>
+      </div>
+
+      <input class="form__submit btn" type="submit" value="Commander !" id="order">
+
+    </form>
+
+  </main>
+
+  <footer class="footer">
+    <a href="./index.html"><img class="logo footer__img" src="../images/compressed/logo.webp" alt="logo" width="300"
+        height="359"></a>
+    <p class="footer__p">10 quai de la charente<br>75019 Paris 19</p>
+    <p class="footer__p">Téléphone : 01 23 45 67 89</p>
+    <p class="footer__p">Email : support@name.com</p>
+  </footer>
+  <p class="copyright">© Copyright 2021 - 2042 | Openclassrooms by Openclassrooms | All Rights Reserved | Powered by</p>
+  <script src="../js/cart.js"></script>
+</body>
+
+</html>

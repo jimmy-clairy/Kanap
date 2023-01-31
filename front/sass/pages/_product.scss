@@ -1,0 +1,40 @@
+.item {
+    img {
+        max-width: 70rem;
+        margin-bottom: 3rem;
+    }
+    &__content {
+        max-width: 70rem;
+        margin: auto;
+        text-align: left;
+    }
+    &__price {
+        padding: 2rem 0;
+    }
+    &__title-description {
+        margin-top: 2rem;
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+    &__description {
+        padding: 2rem 0;
+    }
+    &__content-color {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include desktop-only {
+            flex-direction: row;
+        }
+    }
+    &__content-quantity {
+        padding: 1.6rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include desktop-only {
+            flex-direction: row;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+#items {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    a {
+        display: block;
+        background-color: $color-secondary;
+        margin: 2rem;
+        padding: 2rem;
+        border-radius: $border-rad;
+        max-width: 28rem;
+        transition: all 0.4s;
+        img {
+           height: 18rem;
+        }
+        h3 {
+            font-size: 2rem;
+            margin: 2rem 0;
+        }
+        p {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        &:hover {
+            transform: scale(1.05);
+            background-color: lighten($color-secondary, 10);
+        }
+    }
+}

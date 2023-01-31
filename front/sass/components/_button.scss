@@ -1,0 +1,16 @@
+.btn {
+    display: block;
+    margin:3rem auto 0;
+    padding: 18px 28px;
+    background-color: $color-secondary;
+    border-radius: 40px;
+    border: none;
+    font-size: 22px;
+    color: $color-white;
+    cursor: pointer;
+    transition: transform 0.3s;
+    &:hover {
+        transform: scale(1.05);
+        background-color: lighten($color-secondary, 10);
+    }
+}

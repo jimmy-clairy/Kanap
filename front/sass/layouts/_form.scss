@@ -1,0 +1,22 @@
+.form {
+    width: 80%;
+    max-width: 60rem;
+    margin: auto;
+    &__question {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3rem;
+        input {
+            margin: 0;
+            height: 3rem;
+            width: 100%;
+            text-align: left;
+            padding-left: 1rem;
+        }
+    }
+    &__errorMsg {
+        font-weight: 600;
+        color: rgb(255, 158, 158);
+    }
+}

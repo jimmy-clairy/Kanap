@@ -1,4 +1,4 @@
-import { getBasket } from "./function.js";
+import { getBasket, saveBasket } from "./function.js";
 
 const basket = getBasket()
 const item = document.querySelector('#item')
@@ -9,7 +9,7 @@ async function fetchProduct(basket) {
         const data = await res.json()
 
         // console.log(data);
-        item.innerHTML += `<article class="cart-item border" data-id="${data._id + product.color}">
+        item.innerHTML += `<article class="cart-item border" data-id="${data._id}" data-color="${product.color}">
                                 <img class="cart-item__img" src="${data.imageUrl}" alt="${data.altTxt}" width="350" height="315">
                                 <div class="cart-item__content">
                                     <h2 class="cart-item__heading">${data.name}</h2>
@@ -24,15 +24,19 @@ async function fetchProduct(basket) {
                             </article>`
     }
 
-    const cartItem = document.querySelectorAll('.cart-item')
+    // Sup article
+    const btnDelete = document.querySelectorAll(".cart-item__delete")
 
-    cartItem.forEach(a => {
-        const btnDelete = a.childNodes[3].childNodes[9]
-        btnDelete.addEventListener('click', () => {
-            a.remove()
-            console.log(basket);
-        })
+    btnDelete.forEach(btn => {
+        btn.addEventListener("click", () => deleteProduct(btn.parentElement.parentElement))
     })
 }
 
 fetchProduct(basket)
+
+function deleteProduct(parent) {
+    parent.remove()
+    const basket = getBasket();
+    const newBasket = basket.filter(b => b._id !== parent.dataset.id || b.color !== parent.dataset.color)
+    saveBasket(newBasket)
+}

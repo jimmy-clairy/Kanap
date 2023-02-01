@@ -20,7 +20,6 @@ function createItem(data) {
     const price = document.getElementById('price')
     const description = document.getElementById('description')
     const colors = document.querySelector('#colors')
-    const opt = document.querySelector('#colors option')
 
     const img = document.createElement('img')
 
@@ -49,24 +48,30 @@ colors.addEventListener("change", () => {
 })
 
 const quantity = document.querySelector(".item__content-quantity input")
+
 quantity.addEventListener("change", () => {
     product.quantity = Number(quantity.value)
 })
 
 const btn = document.getElementById('addToCart')
 
-btn.addEventListener('click', () => verif(product))
+btn.addEventListener('click', () => {
+    console.log(product)
+    verif(product)
+})
 
-function verif(p) {
+function verif(product) {
 
-    if (p.color === undefined || p.color === "") {
+    if (product.color === undefined || product.color === "") {
         return alert("Vous devez choisir une couleur")
     }
-    if (p.quantity === undefined || p.quantity < 1 || p.quantity > 100) {
+    if (product.quantity === undefined || product.quantity < 1 || product.quantity > 100) {
         return alert("Vous devez choisir une quantité entre 1 et 100 articles")
     }
 
-    addBasket(p)
-
-    confirm("Votre article a bien etait ajouté voulez vous allez au panier") ? window.location = "cart.html" : console.log("No redirect cart");
+    if (confirm("Votre article a bien etait ajouté voulez vous allez au panier")) {
+        window.location = "cart.html"
+        quantity.value = 0
+    }
+    addBasket(product)
 }

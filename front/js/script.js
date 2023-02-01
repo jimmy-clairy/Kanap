@@ -4,7 +4,7 @@ fetch("http://localhost:3000/api/products")
 
 function addKanap(data) {
     console.table(data);
-    const items = document.getElementById("items")
+    const items = document.querySelector("#items")
 
     for (const kanap of data) {
         const a = document.createElement("a")

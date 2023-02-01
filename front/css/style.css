@@ -203,7 +203,7 @@ img {
   height: 17rem;
   object-fit: cover;
 }
-#items a h3 {
+#items a h2 {
   font-size: 2rem;
   margin: 2rem 0;
 }

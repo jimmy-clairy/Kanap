@@ -181,7 +181,7 @@ img {
 }
 .form__errorMsg {
   font-weight: 600;
-  color: rgb(255, 158, 158);
+  color: #ff9e9e;
 }
 
 #items {
@@ -336,6 +336,12 @@ img {
   .cart__price {
     text-align: right;
   }
+}
+
+#totalQuantity,
+#totalPrice {
+  font-size: 2.2rem;
+  padding: 0 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

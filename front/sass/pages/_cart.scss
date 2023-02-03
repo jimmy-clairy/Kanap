@@ -4,9 +4,11 @@
 
 .cart-item {
     padding: 3rem;
+
     &__img {
         max-width: 35rem;
     }
+
     &__content {
         margin-top: 1.6rem;
         height: 15rem;
@@ -14,13 +16,16 @@
         flex-direction: column;
         justify-content: space-between;
     }
+
     @include tablette-only {
         padding: 3rem 10%;
         display: flex;
+
         &__img {
             width: 50%;
             margin-right: 15%;
         }
+
         &__content {
             margin-top: 0;
             height: auto;
@@ -35,7 +40,14 @@
 .cart__price {
     font-size: 2.2rem;
     margin: 3rem 0 5rem;
+
     @include tablette-only {
         text-align: right;
     }
+}
+
+#totalQuantity,
+#totalPrice {
+    font-size: 2.2rem;
+    padding: 0 0.5rem;
 }
